@@ -63,10 +63,11 @@ header.masthead {
 header.masthead .masthead-content {
   z-index: 1;
   position: relative;
+  height: 100vh;
 }
 
 header.masthead .masthead-content .masthead-heading {
-  font-size: 4rem;
+  font-size: 5rem;
 }
 
 header.masthead .masthead-content .masthead-subheading {

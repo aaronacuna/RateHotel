@@ -1,5 +1,5 @@
 class Usuario {
-    constructor(pCedula, pFoto, pPrimerNombre, pSegundoNombre, pPrimerApellido, pSegundoApellido, pEdad, pEmail, pTelefono,  pPassword, pConfirmedPassword) {
+    constructor(pCedula, pPrimerNombre, pSegundoNombre, pPrimerApellido, pSegundoApellido, pEdad, pEmail, pTelefono,  pPassword, pConfirmedPassword) {
 
         this.cedula = pCedula;
         this.primerNombre = pPrimerNombre;
