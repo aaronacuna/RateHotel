@@ -26,8 +26,11 @@ module.exports.registrar = (req, res) => {
 
 module.exports.listarTodos = (req,res) => {
   UserModel.find().then((user) => {
-    res.send(user);
+    console.log( 'usuri;o' + user);
+     res.send(user);
+    
   });
+
 };
 
 module.exports.actualizar = (req,res) => {

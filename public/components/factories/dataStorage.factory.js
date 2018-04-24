@@ -66,21 +66,20 @@
 
       let peticion = $.ajax ({
         url: 'http://localhost:4000/api/get_all_users',
-        type: 'get',
+        tyoe: 'get',
         contentType: 'application/x-www-form-urlencoded; charset=utf-8',
         dataType: 'json',
         async: false,
-        data: {},
+        data: {}
       });
 
-      peticion.done (usuarios => {
-         ('Datos que vienen desde la base de datos');
-         (usuarios);
-        listaUsuarios = usuarios;
+      peticion.done ((usuarios) => {
+         console.log('Datos que vienen desde la base de datos');
+          listaUsuarios = usuarios;
       });
-      peticion.fail (() => {
+      peticion.fail ((error) => {
         listaUsuarios = [];
-         ('Ocurrió un error');
+        console.log('Ocurrió un error' + error);
       });
 
       return listaUsuarios;

@@ -9,9 +9,10 @@
   function controllerLogin($state, $location, loginService, usersService) {
     let vm = this;
     vm.usuario = {};
-    vm.listaUsuarios = usersService.getUsers();
+    vm.listaUsuarios =[];
 
     vm.iniciarSesion = (pCredenciales) => {
+      vm.listaUsuarios = usersService.getUsers();
       let inicioCorrecto = loginService.startSession(pCredenciales);
 
       if (inicioCorrecto == true) {

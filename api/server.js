@@ -43,10 +43,11 @@ const index = require('./index'),
       nodeMailer = require('./components/mail/mail.route');
 
 
-app.use('/', index);
+
 app.use('/api', users);
-app.use ('/api', hotels);
-app.use('/api', nodeMailer);
+app.use('/', index);
+//app.use ('/api', hotels);
+//app.use('/api', nodeMailer);
 
 module.exports = app;
 
