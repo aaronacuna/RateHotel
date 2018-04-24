@@ -64,7 +64,7 @@
           pageTitle: 'Registro de clientes'
         },
         params: {
-          objClienteTemp: ''
+          objUsuarioTemp: ''
         },
         resolve: {
           load: ['$ocLazyLoad', ($ocLazyLoad) => {
@@ -80,6 +80,9 @@
         templateUrl: './components/clients/listClient/listClient.view.html',
         data:{
           pageTitle: 'Lista de Clientes'
+        },
+        params: {
+          objUsuarioTemp: ''
         },
         resolve: {
           load: ['$ocLazyLoad', ($ocLazyLoad) => {
@@ -97,7 +100,7 @@
           pageTitle: 'Modificar cliente'
         },
         params: {
-          objClienteTemp: ''
+          objUsuarioTemp: ''
         },
         resolve: {
           load: ['$ocLazyLoad', ($ocLazyLoad) => {

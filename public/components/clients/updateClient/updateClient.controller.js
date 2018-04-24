@@ -7,15 +7,20 @@
     controllerUpdateClient.$inject = ['$stateParams', '$state', '$location', 'usersService'];
 
   function controllerUpdateClient($stateParams, $state, $location, usersService) {
+    
+    
     let vm = this;
 
-    vm.regresar = () => {
-      $state.go('listClient');
-    }
+    // vm.regresar = () => {
+    //   $state.go('listClient');
+    // }
 
     vm.editarUsuarios = {};
 
+    vm.objNuevoUsuario = {};
+
     let objUsuarioAEditar = JSON.parse($stateParams.objUsuarioTemp);
+    console.log(objUsuarioAEditar);
 
     let objNuevoUsuario = new Usuario(objUsuarioAEditar.cedula, objUsuarioAEditar.primerNombre, objUsuarioAEditar.segundoNombre, objUsuarioAEditar.primerApellido, objUsuarioAEditar.segundoApellido, objUsuarioAEditar.edad, objUsuarioAEditar.correo, objUsuarioAEditar.telefono, objUsuarioAEditar.password, objUsuarioAEditar.confirmedPassword);
 
@@ -32,16 +37,16 @@
     vm.editarUsuarios.confirmedPassword = objNuevoUsuario.confirmedPassword;
 
 
-    vm.eliminarUsuario = (pEstado) =>{
-      let listaUsuarios = usersService.getUsers();
-      listaUsuarios.forEach(objUsuario => {
-        if(objUsuario.correo == objNuevoUsuario.correo){
-          objUsuario.cambiarEstado(pEstado);
-        }
-        servicioUsuarios.updateUsers(objUsuario);
-      });
-      $state.go('listClient');
-    }
+    // vm.eliminarUsuario = (pEstado) =>{
+    //   let listaUsuarios = usersService.getUsers();
+    //   listaUsuarios.forEach(objUsuario => {
+    //     if(objUsuario.correo == objNuevoUsuario.correo){
+    //       objUsuario.cambiarEstado(pEstado);
+    //     }
+    //     usersService.updateUsers(objUsuario);
+    //   });
+    //   $state.go('listClient');
+    // }
     
 
     vm.editUsuarios = (pUsuario) => {
@@ -59,7 +64,7 @@
           objUsuario.password = pUsuario.password;
           objUsuario.confirmedPassword = pUsuario.confirmedPassword;
 
-          servicioUsuarios.actualizarUsuario(objUsuario);
+          usersService.updateUsers(objUsuario);
 
         }
       });
