@@ -3,8 +3,8 @@ const express = require('express'),
       users = require('./users.api');
 
 
-router.param('id', (req, res, next, id) => {
-  req.body.id = id;
+router.param('correo', (req, res, next, correo) => {
+  req.body.correo = correo;
   next();
 });
 
@@ -16,7 +16,7 @@ router.route('/save_user')
 
 
 router.route('/get_all_users')
-  .get((req, res) => {
+  .get((req,res) => {
     users.listarTodos(req,res);
 });
 

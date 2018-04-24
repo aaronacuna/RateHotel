@@ -1,45 +1,51 @@
-
 <section class="login-block">
-    <div class="container">
-	<div class="row">
-		<div class="col-md-4 login-sec">
-		    <h2 class="text-center">Ingrese a su cuenta</h2>
-		    <form class="login-form">
-  <div class="form-group">
-    <label for="exampleInputEmail1">Correo Electrónico</label>
-    <input type="text" class="form-control" placeholder="">
-    
-  </div>
-  <div class="form-group">
-    <label for="exampleInputPassword1">Contraseña</label>
-    <input type="password" class="form-control" placeholder="">
-  </div>
-  
-  
-    <div class="form-check">
-    <button type="submit" class="btn btn-login float-right">Ingresar</button>
-  </div>
-  
-</form>
-		</div>
-		<div class="col-md-8 banner-sec">
-            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-            <div class="carousel-inner" role="listbox">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 login-sec">
+        <h2 class="text-center">Ingrese a su cuenta</h2>
+        <form class="login-form" ng-submit="vm.startSession(vm.usuario)">
+          
+          <div class="form-group">
+            <label>Correo Electrónico</label>
+            <input type="text" name="user" ng-model="vm.usuario.correo" class="form-control">
+          </div>
 
-    </div>
-    <div class="carousel-item active">
-      <img class="d-block img-fluid" src="../sources/images/login.jpg" alt="First slide">
-      <div class="carousel-caption d-none d-md-block">
-        <div class="banner-text">
-            <h2>Conozca los mejores destinos</h2>
-            <p>El turista merece lo mejor, por lo cual RATE HOTEL pone a su disposición una app que mejorará la experiencia en sus viajes por la paradisíaca Costa Rica. </p>
-        </div>	
+          <div class="form-group">
+            <label>Contraseña</label>
+            <input type="password" class="form-control" name="pass" ng-model="vm.usuario.password">
+          </div>
+
+
+          <div class="form-check">
+            <button type="submit" class="btn btn-login">Ingresar</button>
+          </div>
+
+        </form>
+
+        <p class="message">¿No tiene cuenta?
+          <a ui-sref="registerClient">Crear cuenta</a>
+        </p>
+
+      </div>
+      <div class="col-md-8 banner-sec">
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+          <div class="carousel-inner" role="listbox">
+
+          </div>
+          <div class="carousel-item active">
+            <img class="d-block img-fluid" src="../sources/images/login.jpg" alt="First slide">
+            <div class="carousel-caption d-none d-md-block">
+              <div class="banner-text">
+                <h2>Conozca los mejores destinos</h2>
+                <p>El turista merece lo mejor, por lo cual RATE HOTEL pone a su disposición una app que mejorará la experiencia
+                  en sus viajes por la paradisíaca Costa Rica. </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
     </div>
   </div>
-            </div>	   
-		    
-		</div>
-	</div>
-</div>
 </section>
   

@@ -21,7 +21,7 @@
         button: "Aceptar",
       });
 
-
+      $location.path('/login');
 
     }
   }

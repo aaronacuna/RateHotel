@@ -9,8 +9,8 @@
   function dataStorageFactory($q, $log, $http) {
 
     const localAPI = {
-      getUsersData: _getUsersData,
       setUsersData: _setUsersData,
+      getUsersData: _getUsersData,
       updateUsersData: _updateUsersData,
       setSession: _setSession,
       closeSession: _closeSession,
@@ -24,32 +24,7 @@
     return localAPI;
 
 
-    function _getUsersData() {
-      let listaUsuarios = [];
-
-      let peticion = $.ajax({
-        url: 'http://localhost:4000/api/get_all_users',
-        type: 'get',
-        contentType: 'application/x-www-form-urlencoded; charset=utf-8',
-        dataType: 'json',
-        async: false,
-        data: {}
-      });
-
-      peticion.done((usuarios) => {
-        console.log('Datos que vienen desde la base de datos')
-        console.log(usuarios);
-        listaUsuarios = usuarios;
-      });
-      peticion.fail(() => {
-        listaUsuarios = [];
-        console.log('Ocurrió un error');
-      });
-
-      return listaUsuarios;
-    }
-
-    function _setUsersData(data) {
+       function _setUsersData(data) {
       let response;
 
       let peticion = $.ajax({
@@ -84,6 +59,34 @@
 
       return response;
     }
+
+    
+    function _getUsersData() {
+      let listaUsuarios = [];
+
+      let peticion = $.ajax({
+        url: 'http://localhost:4000/api/get_all_users',
+        type: 'get',
+        contentType: 'application/x-www-form-urlencoded; charset=utf-8',
+        dataType: 'json',
+        async: false,
+        data: {}
+      });
+
+      peticion.done((usuarios) => {
+        // console.log('Datos que vienen desde la base de datos')
+        // console.log(usuarios);
+        listaUsuarios = usuarios;
+      });
+      peticion.fail(() => {
+        listaUsuarios = [];
+        console.log('Ocurrió un error');
+      });
+
+      return listaUsuarios;
+    }
+
+
 
     function _updateUsersData(data) {
       let response;
