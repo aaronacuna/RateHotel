@@ -4,15 +4,14 @@
     .module('rate_hotel')
     .controller('controllerLogin', controllerLogin);
 
-    controllerLogin.$inject = ['$location', 'loginService', 'usersService'];
+    controllerLogin.$inject = ['$state', '$location', 'loginService', 'usersService'];
 
-  function controllerLogin($location, loginService, usersService) {
+  function controllerLogin($state, $location, loginService, usersService) {
     let vm = this;
-    vm.userList = usersService.getUsers();
-    vm.user = {};
+    vm.usuario = {};
+    vm.listaUsuarios = usersService.getUsers();
 
-
-    vm.startSession = (pCredenciales) => {
+    vm.iniciarSesion = (pCredenciales) => {
       let inicioCorrecto = loginService.startSession(pCredenciales);
 
       if (inicioCorrecto == true) {

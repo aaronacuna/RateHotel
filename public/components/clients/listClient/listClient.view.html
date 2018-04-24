@@ -1,0 +1,66 @@
+
+
+
+<div id="container-fluid">
+
+  <table class="table table-responsive table-striped text-centered col-12 offset-1">
+      <legend class="col-12 offset-1">Clientes</legend>
+      <thead class="thead-dark">
+          <tr>
+              <th>Cédula</th>
+              <th>Primer nombre</th>
+              <th>Primer apellido</th>
+              <th>Segundo apellido</th>
+              <th>Edad</th>
+              <th>Correo electrónico</th>
+              <th>Teléfono</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr ng-repeat="usuario in vm.listaUsuarios">
+              <td>{{usuario.cedula}}</td>
+              <td>{{usuario.primerNombre}}</td>
+              <td>{{usuario.primerApellido}}</td>
+              <td>{{usuario.segundoApellido}}</td>
+              <td>{{usuario.tipo}}</td>
+              <td>{{usuario.correo}}</td>
+              <td>{{usuario.telefono}}</td>
+              <td>
+                  <button class="btn btn-success" type="button" ng-click="vm.editUsuarios(usuario)">Editar</button>
+              </td>
+          </tr>
+      </tbody>
+  </table>
+  <table class="table table-responsive table-striped text-centered col-12 offset-1">
+      <legend class="col-12 offset-1">Clientes desactivados</legend>
+      <thead class="thead-dark">
+          <tr>
+            <tr>
+              <th>Cédula</th>
+              <th>Primer nombre</th>
+              <th>Primer apellido</th>
+              <th>Segundo apellido</th>
+              <th>Edad</th>
+              <th>Correo electrónico</th>
+              <th>Teléfono</th>
+          </tr>
+          </tr>
+      </thead>
+      <tbody>
+          <tr ng-repeat="usuario in vm.listaUsuarios" ng-if="usuario.estado === 'inactivo'">
+            <td>{{usuario.cedula}}</td>
+            <td>{{usuario.primerNombre}}</td>
+            <td>{{usuario.primerApellido}}</td>
+            <td>{{usuario.segundoApellido}}</td>
+            <td>{{usuario.tipo}}</td>
+            <td>{{usuario.correo}}</td>
+            <td>{{usuario.telefono}}</td>
+                  <button class="btn btn-success" type="button" ng-click="vm.editUsuarios(usuario)">Editar</button>
+            </td>
+          </tr>
+      </tbody>
+  </table>
+
+
+
+</div>

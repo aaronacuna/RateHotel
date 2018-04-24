@@ -3,10 +3,10 @@ const express = require('express'),
       users = require('./users.api');
 
 
-router.param('id', (req, res, next, id) => {
-  req.body._id = id;
-  next();
-});
+      router.param('id', (req, res, next, id) => {
+        req.body.id = id;
+        next();
+      });
 
 
 router.route('/save_user')

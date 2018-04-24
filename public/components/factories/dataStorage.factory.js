@@ -61,10 +61,10 @@
     }
 
     
-    function _getUsersData() {
-      let usersList = [];
+    function _getUsersData () {
+      let listaUsuarios = [];
 
-      let petition = $.ajax({
+      let peticion = $.ajax ({
         url: 'http://localhost:4000/api/get_all_users',
         type: 'get',
         contentType: 'application/x-www-form-urlencoded; charset=utf-8',
@@ -73,18 +73,17 @@
         data: {},
       });
 
-      petition.done(users => {
-        console.log('Datos que vienen desde la base de datos');
-        console.log(users);
-
-        usersList = users;
+      peticion.done (usuarios => {
+         ('Datos que vienen desde la base de datos');
+         (usuarios);
+        listaUsuarios = usuarios;
       });
-      petition.fail(() => {
-        usersList = [];
-        console.log('Ocurrió un error');
+      peticion.fail (() => {
+        listaUsuarios = [];
+         ('Ocurrió un error');
       });
 
-      return usersList;
+      return listaUsuarios;
     }
 
 
@@ -280,30 +279,22 @@
     //Inicio Autenticación
     //
 
-    /**
-     * Función que almacena las credenciales dentro del session Storage
-     * @param {Credenciales} value 
-     */
-    function _setSession(value) {
+  
+    function _setSession (value) {
       let response = true;
-      sessionStorage.setItem('session', JSON.stringify(value));
+      sessionStorage.setItem ('session', JSON.stringify (value));
       return response;
     }
 
-    /**
-     * Función que elimina los datos de la sesión activa
-     */
-    function _closeSession() {
-      let response = true;
-      sessionStorage.removeItem('session');
-      return response;
-    };
 
-    /**
-     * Función que retorna los datos almacenados dentro del sessionStorage
-     */
-    function _getSession() {
-      let sessionActive = JSON.parse(sessionStorage.getItem('session'));
+    function _closeSession () {
+      let response = true;
+      sessionStorage.removeItem ('session');
+      return response;
+    }
+
+    function _getSession () {
+      let sessionActive = JSON.parse (sessionStorage.getItem ('session'));
 
       return sessionActive;
     }
