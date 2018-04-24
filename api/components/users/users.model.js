@@ -13,7 +13,7 @@ var UserSchema = new mongoose.Schema({
   correo : {type : String, required : true, unique: true},
   telefono : {type : String, required : true},
   password : {type : String, required : true},
-  confirmedPassword : {type : String, required : true},
+  confirmedPassword : {type : String},
   estado : {type : String, required : true}
 });
 

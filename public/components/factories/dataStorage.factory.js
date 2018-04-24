@@ -62,30 +62,30 @@
 
     
     function _getUsersData() {
-      let listaUsuarios = [];
+      let usersList = [];
 
-      let peticion = $.ajax({
+      let petition = $.ajax({
         url: 'http://localhost:4000/api/get_all_users',
         type: 'get',
         contentType: 'application/x-www-form-urlencoded; charset=utf-8',
         dataType: 'json',
         async: false,
-        data: {}
+        data: {},
       });
 
-      peticion.done((usuarios) => {
-        // console.log('Datos que vienen desde la base de datos')
-        // console.log(usuarios);
-        listaUsuarios = usuarios;
+      petition.done(users => {
+        console.log('Datos que vienen desde la base de datos');
+        console.log(users);
+
+        usersList = users;
       });
-      peticion.fail(() => {
-        listaUsuarios = [];
+      petition.fail(() => {
+        usersList = [];
         console.log('Ocurrió un error');
       });
 
-      return listaUsuarios;
+      return usersList;
     }
-
 
 
     function _updateUsersData(data) {
