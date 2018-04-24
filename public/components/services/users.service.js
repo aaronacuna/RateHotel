@@ -23,7 +23,7 @@
             addUsers: _addUsers,
             getUsers: _getUsers,
             updateUsers: _updateUsers,
-            
+            getRol: _getRol,
             }
         
             return publicAPI
@@ -57,11 +57,18 @@
 
         function _updateUsers(pUsuario) {
             let modificacionExitosa = false;
-      
+
             modificacionExitosa = dataStorageFactory.updateUsersData(pUsuario);
-      
+
             return modificacionExitosa;
-          }
+        }
+
+
+        function _getRol() {
+            let session = JSON.parse(sessionStorage.getItem('sesion'));
+            let rol = session.correo;
+            return rol;
+        }
 
 
 
