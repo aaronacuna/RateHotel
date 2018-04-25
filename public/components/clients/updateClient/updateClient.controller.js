@@ -11,9 +11,9 @@
     
     let vm = this;
 
-    // vm.regresar = () => {
-    //   $state.go('listClient');
-    // }
+    vm.regresar = () => {
+    $state.go('listClient');
+    }
 
     vm.editarUsuarios = {};
 
@@ -36,18 +36,6 @@
     vm.editarUsuarios.password = objNuevoUsuario.password;
     vm.editarUsuarios.confirmedPassword = objNuevoUsuario.confirmedPassword;
 
-
-    // vm.eliminarUsuario = (pEstado) =>{
-    //   let listaUsuarios = usersService.getUsers();
-    //   listaUsuarios.forEach(objUsuario => {
-    //     if(objUsuario.correo == objNuevoUsuario.correo){
-    //       objUsuario.cambiarEstado(pEstado);
-    //     }
-    //     usersService.updateUsers(objUsuario);
-    //   });
-    //   $state.go('listClient');
-    // }
-    
 
     vm.editUsuarios = (pUsuario) => {
       let listaUsuarios = usersService.getUsers();

@@ -3,71 +3,71 @@
     <div class="row">
       <div class="col-md-6 offset-3 login-sec">
           <h1 class="text-center">RATE HOTEL</h1>
-        <h2 class="text-center">Modificar Usuario</h2>
+        <h2 class="text-center">Registro de Usuarios</h2>
        
        
        
-        <form class="login-form" ng-submit="vm.editUsuarios(vm.editarUsuarios)">
+        <form class="login-form" ng-submit="vm.registrarUsuario(vm.nuevoUsuario)">
 
           <div class="form-group">
             <label>Cédula</label>
-            <input type="text" class="form-control" ng-model="vm.editarUsuarios.cedula" required>
+            <input type="text" class="form-control" ng-model="vm.nuevoUsuario.cedula" required>
           </div>
           
           <div class="form-group">
             <label>Nombre</label>
-            <input type="text" class="form-control" ng-model="vm.editarUsuarios.primerNombre"required>
+            <input type="text" class="form-control" ng-model="vm.nuevoUsuario.primerNombre"required>
           </div>
 
           <div class="form-group">
             <label>Segundo Nombre</label>
-            <input type="text" class="form-control" ng-model="vm.editarUsuarios.segundoNombre">
+            <input type="text" class="form-control" ng-model="vm.nuevoUsuario.segundoNombre">
           </div>
 
           <div class="form-group">
             <label>Apellido</label>
-            <input type="text" class="form-control" ng-model="vm.editarUsuarios.primerApellido"required>
+            <input type="text" class="form-control" ng-model="vm.nuevoUsuario.primerApellido"required>
           </div>
 
           <div class="form-group">
             <label>Segundo Apellido</label>
-            <input type="text" class="form-control" ng-model="vm.editarUsuarios.segundoApellido">
+            <input type="text" class="form-control" ng-model="vm.nuevoUsuario.segundoApellido">
           </div>
           
           <div class="form-group">
             <label>Edad</label>
-            <input type="number" class="form-control" ng-model="vm.editarUsuarios.edad" required>
+            <input type="number" class="form-control" ng-model="vm.nuevoUsuario.edad" required>
           </div>
 
           <div class="form-group">
             <label>Email</label>
-            <input type="email" class="form-control" ng-model="vm.editarUsuarios.correo" required>
+            <input type="email" class="form-control" ng-model="vm.nuevoUsuario.correo" required>
           </div>
 
           <div class="form-group">
               <label>Teléfono</label>
-              <input type="text" class="form-control" ng-model="vm.editarUsuarios.telefono" required>
+              <input type="text" class="form-control" ng-model="vm.nuevoUsuario.telefono" required>
             </div>
 
           <div class="form-group">
             <label>Contraseña</label>
-            <input type="password" class="form-control" ng-model="vm.editarUsuarios.password" required>
+            <input type="password" class="form-control" ng-model="vm.nuevoUsuario.password" required>
           </div>
           
           <div class="form-group">
             <label>Confirmar contraseña</label>
-            <input type="password" class="form-control" ng-model="vm.editarUsuarios.confirmedPassword">
+            <input type="password" class="form-control" ng-model="vm.nuevoUsuario.confirmedPassword" required>
           </div>
   
           <div class="form-check">
-            <button type="submit" class="btn btn-login">Finalizar Edición</button>
-          </div>
-
-          <div class="form-check">
-            <button type="button" class="btn btn-warning" ng-click="vm.regresar()">Regresar</button>
+            <button type="submit" class="btn btn-login">Registrarse</button>
           </div>
 
         </form>
+
+        <p class="message">Volver al Dashboard
+            <a ui-sref="dashboard">Volver</a>
+          </p>
       </div>
       <div class="col-md-12 banner-sec">
         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">

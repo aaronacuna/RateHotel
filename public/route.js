@@ -75,6 +75,24 @@
         controllerAs: 'vm'
       })
 
+      .state('registerClientAdmin', {
+        url: '/registerClientAdmin',
+        templateUrl: './components/clients/registerClient/registerClientAdmin.view.html',
+        data:{
+          pageTitle: 'Registro de clientes'
+        },
+        params: {
+          objUsuarioTemp: ''
+        },
+        resolve: {
+          load: ['$ocLazyLoad', ($ocLazyLoad) => {
+            return $ocLazyLoad.load('./components/clients/registerClient/registerClientAdmin.controller.js')
+          }]
+        },
+        controller: 'controllerRegisterClientAdmin',
+        controllerAs: 'vm'
+      })
+
       .state('listClient', {
         url: '/listClient',
         templateUrl: './components/clients/listClient/listClient.view.html',

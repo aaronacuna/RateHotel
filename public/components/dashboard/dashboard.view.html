@@ -2,7 +2,7 @@
 
     <div class="title-arch">RATE HOTEL</div>
 
-    <div ng-hide="vm.rol === '1@rate.com'" class="col-xl-3 col-lg-3 col-md-3 col-sm-3 project project-7 wow animated animated2 fadeInLeft">
+    <div ng-hide="vm.rol === 'administrador@rate.com'" class="col-xl-3 col-lg-3 col-md-3 col-sm-3 project project-7 wow animated animated2 fadeInLeft">
         <div class="project-hover">
             <h2>EVALUAR HOTELES</h2>
               <hr />
@@ -11,26 +11,26 @@
           </div>
       </div>
     
-      <div ng-show ="vm.rol === '1@rate.com'" class="col-xl-3 col-lg-3 col-md-3 col-sm-3 project wow animated animated4 fadeInLeft">
+      <div ng-show ="vm.rol === 'administrador@rate.com'" class="col-xl-3 col-lg-3 col-md-3 col-sm-3 project wow animated animated4 fadeInLeft">
             <div class="project-hover">
               <h2>REGISTRO DE CLIENTES</h2>
                 <hr />
                 <p>Ingrese nuevos usuarios de Rate Hotel.</p>
-                <a href="#">REGISTRAR</a>
+                <a href="#" ui-sref="registerClientAdmin">REGISTRAR</a>
             </div>
         </div>
 
-      <div ng-show ="vm.rol === '1@rate.com'" class="col-xl-3 col-lg-3 col-md-3 col-sm-3 project project-2 wow animated animated3 fadeInLeft">
+      <div ng-show ="vm.rol === 'administrador@rate.com'" class="col-xl-3 col-lg-3 col-md-3 col-sm-3 project project-2 wow animated animated3 fadeInLeft">
           <div class="project-hover">
               <h2>LISTA DE CLIENTES</h2>
                 <hr />
                 <p>Acá podrá ver los usuarios que han sido registrado en la aplicación.</p>
-                <a href="#">VER USUARIOS</a>
+                <a href="#" ui-sref="listClient">VER USUARIOS</a>
             </div>
         </div>
 
 
-      <div ng-hide="vm.rol === '1@rate.com'" class="col-xl-3 col-lg-3 col-md-3 col-sm-3 project project-3 wow animated animated2 fadeInLeft">
+      <div ng-hide="vm.rol === 'administrador@rate.com'" class="col-xl-3 col-lg-3 col-md-3 col-sm-3 project project-3 wow animated animated2 fadeInLeft">
           <div class="project-hover">
               <h2>VER PERFIL</h2>
                 <hr />
@@ -39,11 +39,11 @@
             </div>
         </div>
 
-        <div ng-show ="vm.rol === '1@rate.com'" class="col-xl-3 col-lg-3 col-md-3 col-sm-3 project project-5 wow animated animated2 fadeInLeft">
+        <div ng-show ="vm.rol === 'administrador@rate.com'" class="col-xl-3 col-lg-3 col-md-3 col-sm-3 project project-5 wow animated animated2 fadeInLeft">
             <div class="project-hover">
                 <h2>REGISTRAR HOTEL</h2>
                   <hr />
-                  <p>Acá puede ingresar nuevos hoteles que ser+an parte de Rate Hotel.</p>
+                  <p>Acá puede ingresar nuevos hoteles que serán parte de Rate Hotel.</p>
                   <a href="#">REGISTRAR</a>
               </div>
           </div>

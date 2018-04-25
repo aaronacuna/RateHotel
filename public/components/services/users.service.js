@@ -44,7 +44,7 @@
             listaUsuariosBD.forEach(objUsuario => {
      
                     let objUsuarioTemp = new Usuario(objUsuario.cedula, objUsuario.primerNombre, objUsuario.segundoNombre, objUsuario.primerApellido, objUsuario.segundoApellido, objUsuario.edad, objUsuario.correo, objUsuario.telefono, objUsuario.password, objUsuario.confirmedPassword)
-                
+                    objUsuarioTemp.cambiarEstado(objUsuario.estado);
                     
                     listaUsuarios.push(objUsuarioTemp);
                 });

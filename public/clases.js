@@ -17,6 +17,7 @@ class Usuario {
     cambiarEstado(pEstado) {
         this.estado = pEstado;
     }
+    
 }
 
 

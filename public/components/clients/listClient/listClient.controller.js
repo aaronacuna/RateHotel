@@ -10,12 +10,32 @@
     let vm = this;
 
     vm.listaUsuarios = listarUsuarios();
-  
-
+    
     vm.editUsuarios = (pUsuario) =>{
       $state.go('updateClient', {objUsuarioTemp : JSON.stringify(pUsuario)});
 
     };
+
+
+    vm.eliminarUsuario = (pnuevoUsuario) => {
+      
+     
+      let objNuevoUsuario = new Usuario(pnuevoUsuario.cedula, pnuevoUsuario.primerNombre, pnuevoUsuario.segundoNombre, pnuevoUsuario.primerApellido, pnuevoUsuario.segundoApellido, pnuevoUsuario.edad, pnuevoUsuario.correo, pnuevoUsuario.telefono, pnuevoUsuario.password, pnuevoUsuario.confirmedPassword);
+
+      objNuevoUsuario.cambiarEstado('inactivo');
+      usersService.updateUsers(objNuevoUsuario);
+      location.reload();
+    }
+
+    vm.activarUsuario = (pnuevoUsuario) => {
+      
+     
+      let objNuevoUsuario = new Usuario(pnuevoUsuario.cedula, pnuevoUsuario.primerNombre, pnuevoUsuario.segundoNombre, pnuevoUsuario.primerApellido, pnuevoUsuario.segundoApellido, pnuevoUsuario.edad, pnuevoUsuario.correo, pnuevoUsuario.telefono, pnuevoUsuario.password, pnuevoUsuario.confirmedPassword);
+
+      objNuevoUsuario.cambiarEstado('activo');
+      usersService.updateUsers(objNuevoUsuario);
+      location.reload();
+    }
 
     function listarUsuarios(){
       let listaUsuarios = usersService.getUsers();
