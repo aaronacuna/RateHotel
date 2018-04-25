@@ -44,5 +44,9 @@ class Hotel{
         let provCantDist = this.provincia + ', ' + this.canton + ', ' + this.distrito + ' ';
         return provCantDist;
     }
+
+    cambiarEstado(pEstado) {
+        this.estado = pEstado;
+    }
 }
 

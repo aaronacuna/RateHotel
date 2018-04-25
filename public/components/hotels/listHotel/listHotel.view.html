@@ -1,0 +1,82 @@
+<div class="container-fluid">
+
+    <table class="table table-striped table-dark responsive">
+            <h1>Hoteles</h1>
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Foto</th>
+                    <th>Provincia</th>
+                    <th>Canton</th>
+                    <th>Distrito</th>
+                    <th>Dirección</th>
+                    <th>Correo Servicio al Cliente</th>
+                    <th>Teléfono Servicio al Cliente</th>
+                    <th>Correo Reservaciones</th>
+                    <th>Teléfono Reservaciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="hotel in vm.listaHoteles" ng-if="hotel.estado === 'activo'">
+                    <td>{{hotel.nombre}}</td>
+                    <td>{{hotel.foto}}</td>
+                    <td>{{hotel.provincia}}</td>
+                    <td>{{hotel.canton}}</td>
+                    <td>{{hotel.distrito}}</td>
+                    <td>{{hotel.direccionExacta}}</td>
+                    <td>{{hotel.correoSC}}</td>
+                    <td>{{hotel.telefonoSC}}</td>
+                    <td>{{hotel.correoReservaciones}}</td>
+                    <td>{{hotel.telefonoReservaciones}}</td>
+                    <td>
+                        <button class="btn btn-success" type="button" ng-click="vm.editHoteles(hotel)">Editar</button>
+                    </td>
+                    <td>
+                      <button class="btn btn-danger" type="button" ng-click="vm.eliminarHotel(hotel)">Desactivar</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-striped table-dark">
+          <h1>Hoteles desactivados</h1>
+            <thead>
+                <tr>
+                  <tr>
+                      <th>Nombre</th>
+                      <th>Foto</th>
+                      <th>Provincia</th>
+                      <th>Canton</th>
+                      <th>Distrito</th>
+                      <th>Dirección</th>
+                      <th>Correo Servicio al Cliente</th>
+                      <th>Teléfono Servicio al Cliente</th>
+                      <th>Correo Reservaciones</th>
+                      <th>Teléfono Reservaciones</th>
+                </tr>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="hotel in vm.listaHoteles" ng-if="hotel.estado === 'inactivo'">
+                    <td>{{hotel.nombre}}</td>
+                    <td>{{hotel.foto}}</td>
+                    <td>{{hotel.provincia}}</td>
+                    <td>{{hotel.canton}}</td>
+                    <td>{{hotel.distrito}}</td>
+                    <td>{{hotel.direccionExacta}}</td>
+                    <td>{{hotel.correoSC}}</td>
+                    <td>{{hotel.telefonoSC}}</td>
+                    <td>{{hotel.correoReservaciones}}</td>
+                    <td>{{hotel.telefonoReservaciones}}</td>
+                  <td>
+                        <button class="btn btn-danger" type="button" ng-click="vm.activarHotel(hotel)">Activar</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+</div>
+
+
+
+
+

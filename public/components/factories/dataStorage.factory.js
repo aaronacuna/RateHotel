@@ -150,7 +150,7 @@
         listaHoteles = hoteles;
       });
       peticion.fail(() => {
-        listaUsuarios = [];
+        listaHoteles = [];
         console.log('Ocurrió un error');
       });
 

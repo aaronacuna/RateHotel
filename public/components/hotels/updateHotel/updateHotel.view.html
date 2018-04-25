@@ -1,0 +1,106 @@
+<section class="register-block">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 offset-3 login-sec">
+            <h1 class="text-center">RATE HOTEL</h1>
+          <h2 class="text-center">Modificar Hoteles</h2>
+         
+         
+         
+          <form class="login-form" ng-submit="vm.editHoteles(vm.editarHoteles)">
+  
+            <div class="form-group">
+              <label>Nombre</label>
+              <input type="text" class="form-control" ng-model="vm.editarHoteles.nombre" required>
+            </div>
+            
+            <label for="">Fotografía</label>
+            <input type="text" class="form-control" ng-model="vm.editarHoteles.foto">
+  
+            <div class="form-group">
+              <label>Latitud</label>
+              <input type="text" class="form-control" ng-model="vm.editarHoteles.latitud" required>
+            </div>
+  
+            <div class="form-group">
+              <label>Longitud</label>
+              <input type="text" class="form-control" ng-model="vm.editarHoteles.longitud"required>
+            </div>
+  
+            <div class="form-group">
+              <label>Segundo Apellido</label>
+              <input type="text" class="form-control" ng-model="vm.editarHoteles.segundoApellido">
+            </div>
+
+            <div class="form-group">
+                <label>Provincia</label>
+                <input type="text" class="form-control" ng-model="vm.editarHoteles.provincia">
+            </div>
+
+            <div class="form-group">
+                <label>Canton</label>
+                <input type="text" class="form-control" ng-model="vm.editarHoteles.canton">
+            </div>
+  
+            <div class="form-group">
+                <label>Distrito</label>
+                <input type="text" class="form-control" ng-model="vm.editarHoteles.distrito">
+            </div>
+
+            <div class="form-group">
+                <label>Dirección Exacta</label>
+                <input type="text" class="form-control" ng-model="vm.editarHoteles.direccionExacta">
+            </div>
+            
+            <div class="form-group">
+              <label>Correo de Servicio al Cliente</label>
+              <input type="email" class="form-control" ng-model="vm.editarHoteles.correoSC" required>
+            </div>
+  
+            <div class="form-group">
+                <label>Teléfono de Servicio al Cliente</label>
+                <input type="text" class="form-control" ng-model="vm.editarHoteles.telefonoSC" required>
+            </div>
+
+            <div class="form-group">
+                <label>Correo de Reservaciones</label>
+                <input type="email" class="form-control" ng-model="vm.editarHoteles.correoReservaciones" required>
+              </div>
+    
+              <div class="form-group">
+                  <label>Teléfono de Reservaciones</label>
+                  <input type="text" class="form-control" ng-model="vm.editarHoteles.telefonoReservaciones" required>
+              </div>
+  
+
+    
+            <div class="form-check">
+              <button type="submit" class="btn btn-login">Registrar Hotel</button>
+            </div>
+  
+          </form>
+  
+          <p class="message">Volver
+              <a href="#" ui-sref="dashboard">Regresar al dashboard</a>
+            </p>
+        </div>
+        <div class="col-md-12 banner-sec">
+          <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner" role="listbox">
+  
+            </div>
+            <div class="carousel-item active">
+              <img class="d-block img-fluid" src="../sources/images/register.jpg" alt="First slide">
+              <div class="carousel-caption d-none d-md-block">
+                <div class="banner-text">
+                  <h2>Regístrese en nuestra app</h2>
+                  <p>Su opinión cuenta, por lo que Rate Hotel le permite ayudar a los hoteles de Costa Rica a estar siempre a la cabeza en satisfacción del cliente. </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </section>
