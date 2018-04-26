@@ -16,6 +16,8 @@
 
     };
 
+    vm.rol = usersService.getRol();
+
 
     vm.eliminarUsuario = (pnuevoUsuario) => {
       

@@ -11,6 +11,8 @@
     
     let vm = this;
 
+    vm.rol = usersService.getRol();
+
     vm.editarUsuarios = {};
 
     vm.objNuevoUsuario = {};
@@ -55,7 +57,12 @@
       swal("Edición exitosa", "Usuario editado correctamente", "success", {
         button: "Aceptar",
       });
-      $state.go('listClient');
+      if (vm.rol == 'administrador@rate.com') {
+        $state.go('listClient');
+      } else {
+        $state.go('listPerfil')
+      }
+      ;
     }
   }
 

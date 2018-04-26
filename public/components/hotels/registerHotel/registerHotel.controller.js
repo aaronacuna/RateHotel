@@ -12,7 +12,7 @@
     vm.nuevoHotel = {};
 
  
-    vm.registrarHotel = (pNuevoHotel) => {
+    vm.registrarHotel = (pnuevoHotel) => {
 
       let objNuevoHotel = new Hotel(pnuevoHotel.nombre, pnuevoHotel.foto, pnuevoHotel.latitud, pnuevoHotel.longitud, pnuevoHotel.provincia, pnuevoHotel.canton, pnuevoHotel.distrito, pnuevoHotel.direccionExacta, pnuevoHotel.telefonoSC, pnuevoHotel.telefonoReservaciones, pnuevoHotel.correoSC, pnuevoHotel.correoReservaciones);
 

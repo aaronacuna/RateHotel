@@ -1,4 +1,10 @@
 <div id="dashboard" class="container-fluid">
+        <div class="row">
+            <div id="sessionClose" class="col-2 offset-10">
+                <a  ng-show ="vm.rol === 'administrador@rate.com'" id="close" href="#" ng-click="vm.cerrarSesion()">CERRAR SESIÓN</a>
+            </div>
+        </div>
+        
 
     <div class="title-arch">RATE HOTEL</div>
 
@@ -35,7 +41,7 @@
               <h2>VER PERFIL</h2>
                 <hr />
                 <p>Toda tu información personal.</p>
-                <a href="#" ui-sref="listClient">VER PERFIL</a>
+                <a href="#" ui-sref="listPerfil">VER PERFIL</a>
             </div>
         </div>
 
@@ -57,7 +63,7 @@
                 </div>
             </div>
 
-      <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 project project-4 wow animated fadeInLeft">
+      <div ng-hide="vm.rol === 'administrador@rate.com'" class="col-xl-3 col-lg-3 col-md-3 col-sm-3 project project-4 wow animated fadeInLeft">
           <div class="project-hover">
               <h2>CERRAR SESIÓN</h2>
                 <hr />

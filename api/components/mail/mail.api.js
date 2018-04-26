@@ -13,8 +13,8 @@ module.exports.enviarCorreo = (req, res) =>{
   let mailOptios = {
     from: 'aacunac@ucenfotec.ac.cr',
     to: req.body.correo,
-    subject: req.body.subject,
-    text: req.body.contrasenna
+    subject: 'Bienvenid@ a Rate Hotel',
+    text: 'Bienvenid@ a nuestro sistema, su contraseña de usuario es: ' + req.body.password + '     . Atentamente el equipo de RATE HOTEL.'
   }
 
   transporter.sendMail(mailOptios,(error, info)=>{

@@ -1,0 +1,39 @@
+<div class="container-fluid">
+
+    <input class="back" ui-sref="dashboard" type="image" src="../sources/images/back.png" width="60" height="60">  
+
+    <table class="table table-striped table-dark responsive">
+            <h1>Perfil</h1>
+            <thead>
+                <tr>
+                    <th>Cédula</th>
+                    <th>Primer nombre</th>
+                    <th>Primer apellido</th>
+                    <th>Segundo apellido</th>
+                    <th>Edad</th>
+                    <th>Correo electrónico</th>
+                    <th>Teléfono</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="usuario in vm.listaUsuarios" ng-if="usuario.correo === vm.rol">
+                    <td>{{usuario.cedula}}</td>
+                    <td>{{usuario.primerNombre}}</td>
+                    <td>{{usuario.primerApellido}}</td>
+                    <td>{{usuario.segundoApellido}}</td>
+                    <td>{{usuario.edad}}</td>
+                    <td>{{usuario.correo}}</td>
+                    <td>{{usuario.telefono}}</td>
+                    <td>
+                        <button class="btn btn-success" type="button" ng-click="vm.editUsuarios(usuario)">Editar</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+</div>
+
+
+
+
+

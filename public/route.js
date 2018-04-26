@@ -111,6 +111,24 @@
         controllerAs: 'vm'
       })
 
+      .state('listPerfil', {
+        url: '/listPerfil',
+        templateUrl: './components/clients/listClient/listPerfil.view.html',
+        data:{
+          pageTitle: 'Perfil de Clientes'
+        },
+        params: {
+          objUsuarioTemp: ''
+        },
+        resolve: {
+          load: ['$ocLazyLoad', ($ocLazyLoad) => {
+            return $ocLazyLoad.load('./components/clients/listClient/listClient.controller.js')
+          }]
+        },
+        controller: 'controllerListClient',
+        controllerAs: 'vm'
+      })
+
       .state('updateClient', {
         url: '/updateClient',
         templateUrl: './components/clients/updateClient/updateClient.view.html',
@@ -187,7 +205,7 @@
           pageTitle: 'Evaluar Hotel'
         },
         params: {
-          objEvaluacionTemp: ''
+          objHotelTemp: ''
         },
         resolve: {
           load: ['$ocLazyLoad', ($ocLazyLoad) => {

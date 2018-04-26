@@ -1,6 +1,7 @@
 <section class="register-block">
   <div class="container">
-      <input class="back" ui-sref="listClient" type="image" src="../sources/images/back.png" width="60" height="60">  
+      <input ng-show="vm.rol === 'administrador@rate.com'" class="back" ui-sref="listClient" type="image" src="../sources/images/back.png" width="60" height="60">  
+      <input ng-hide="vm.rol === 'administrador@rate.com'" class="back" ui-sref="listPerfil" type="image" src="../sources/images/back.png" width="60" height="60">
     <div class="row">
       <div class="col-md-6 offset-3 login-sec">
           <h1 class="text-center">RATE HOTEL</h1>
