@@ -1,5 +1,7 @@
 <body>
-        <div class="title-arch">RATE HOTEL</div>
+        <input class="back" ui-sref="listHotel" type="image" src="../sources/images/back.png" width="60" height="60">      
+    <div class="title-arch">RATE HOTEL</div> 
+    
   <div class="wrapper">
       <form>
             <span class="rating">Comida         
@@ -85,6 +87,13 @@
       <div><strong>Limpieza:</strong> {{rating4}}</div>
       <h1>Promedio</h1>
       <div><strong>Total: {{ (rating -- rating1 -- rating2 -- rating3 --rating4)/5 }}</strong></div>
+    <form ng-submit="vm.evaluar(vm.evaluacion)">
+        <input type="number" ng-model="vm.evaluacion" value="{{ (rating -- rating1 -- rating2 -- rating3 --rating4)/5 }}">
+        <div class="form-check">
+            <button type="submit" class="btn btn-login">Evaluar</button>
+        </div>
+    </form>
+      
   </div>
 
 </body>

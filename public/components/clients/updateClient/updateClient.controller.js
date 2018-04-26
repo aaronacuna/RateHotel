@@ -11,10 +11,6 @@
     
     let vm = this;
 
-    vm.regresar = () => {
-    $state.go('listClient');
-    }
-
     vm.editarUsuarios = {};
 
     vm.objNuevoUsuario = {};

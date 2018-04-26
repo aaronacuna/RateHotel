@@ -4,15 +4,22 @@
     .module('rate_hotel')
     .controller('controllerListHotel', controllerListHotel);
     
-    controllerListHotel.$inject = ['$state', '$stateParams', '$location', 'hotelsService'];
+    controllerListHotel.$inject = ['$state', '$stateParams', '$location', 'hotelsService', 'usersService'];
 
-  function controllerListHotel($state, $stateParams, $location, hotelsService) {
+  function controllerListHotel($state, $stateParams, $location, hotelsService, usersService) {
     let vm = this;
 
     vm.listaHoteles = listarHoteles();
+
+    vm.rol = usersService.getRol();
     
     vm.editHoteles = (pHotel) =>{
       $state.go('updateHotel', {objHotelTemp : JSON.stringify(pHotel)});
+
+    };
+
+    vm.evaluarHotel = (pHotel) =>{
+      $state.go('rating', {objHotelTemp : JSON.stringify(pHotel)});
 
     };
 

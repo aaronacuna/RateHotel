@@ -1,5 +1,5 @@
 <div class="container-fluid">
-
+        <input class="back" ui-sref="dashboard" type="image" src="../sources/images/back.png" width="60" height="60">  
     <table class="table table-striped table-dark responsive">
             <h1>Hoteles</h1>
             <thead>
@@ -28,17 +28,22 @@
                     <td>{{hotel.telefonoSC}}</td>
                     <td>{{hotel.correoReservaciones}}</td>
                     <td>{{hotel.telefonoReservaciones}}</td>
-                    <td>
+                    <td ng-show="vm.rol === 'administrador@rate.com'">
                         <button class="btn btn-success" type="button" ng-click="vm.editHoteles(hotel)">Editar</button>
                     </td>
-                    <td>
+                    <td ng-show="vm.rol === 'administrador@rate.com'">
                       <button class="btn btn-danger" type="button" ng-click="vm.eliminarHotel(hotel)">Desactivar</button>
+                    </td>
+                    <td ng-hide="vm.rol === 'administrador@rate.com'">
+                        <button class="btn btn-success" type="button" ng-click="vm.evaluarHotel(hotel)">Evaluar</button>
                     </td>
                 </tr>
             </tbody>
         </table>
-        <table class="table table-striped table-dark">
-          <h1>Hoteles desactivados</h1>
+        
+        
+        <table ng-show="vm.rol === 'administrador@rate.com'" class="table table-striped table-dark">
+          <h1 ng-show="vm.rol === 'administrador@rate.com'">Hoteles desactivados</h1>
             <thead>
                 <tr>
                   <tr>
@@ -67,7 +72,7 @@
                     <td>{{hotel.telefonoSC}}</td>
                     <td>{{hotel.correoReservaciones}}</td>
                     <td>{{hotel.telefonoReservaciones}}</td>
-                  <td>
+                    <td>
                         <button class="btn btn-danger" type="button" ng-click="vm.activarHotel(hotel)">Activar</button>
                     </td>
                 </tr>

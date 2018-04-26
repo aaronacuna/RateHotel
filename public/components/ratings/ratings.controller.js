@@ -9,8 +9,6 @@
   function controllerRatings($state, $stateParams, $location, hotelsService) {
     let vm = this;
 
-    
-
 
   }
 })();
