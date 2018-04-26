@@ -180,6 +180,24 @@
         controllerAs: 'vm'
       })
 
+      .state('rating', {
+        url: '/rating',
+        templateUrl: './components/ratings/ratings.view.html',
+        data:{
+          pageTitle: 'Evaluar Hotel'
+        },
+        params: {
+          objEvaluacionTemp: ''
+        },
+        resolve: {
+          load: ['$ocLazyLoad', ($ocLazyLoad) => {
+            return $ocLazyLoad.load('./components/ratings/ratings.controller.js')
+          }]
+        },
+        controller: 'controllerRatings',
+        controllerAs: 'vm'
+      })
+
 
 
     $urlRouterProvider.otherwise('/');

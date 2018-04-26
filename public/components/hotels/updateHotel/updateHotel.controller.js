@@ -63,7 +63,7 @@
       swal("Edición exitosa", "Usuario editado correctamente", "success", {
         button: "Aceptar",
       });
-      $state.go('listClient');
+      $state.go('listHotel');
     }
   }
 
