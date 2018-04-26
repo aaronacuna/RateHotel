@@ -1,34 +1,92 @@
 <body>
+        <div class="title-arch">RATE HOTEL</div>
   <div class="wrapper">
-      <span class="rating">Comida
-          <input id="rating5" type="radio" name="rating" value="5">
-          <label for="rating5">5</label>
-          <input id="rating4" type="radio" name="rating" value="4">
-          <label for="rating4">4</label>
-          <input id="rating3" type="radio" name="rating" value="3" checked>
-          <label for="rating3">3</label>
-          <input id="rating2" type="radio" name="rating" value="2">
-          <label for="rating2">2</label>
-          <input id="rating1" type="radio" name="rating" value="1">
-          <label for="rating1">1</label>
-      </span>
+      <form>
+            <span class="rating">Comida         
+                    <input id="rating5" type="radio" ng-model="rating" value="5">
+                    <label for="rating5">5</label>
+                    <input id="rating4" type="radio" ng-model="rating" value="4">
+                    <label for="rating4">4</label>
+                    <input id="rating3" type="radio" ng-model="rating" value="3" checked>
+                    <label for="rating3">3</label>
+                    <input id="rating2" type="radio" ng-model="rating" value="2">
+                    <label for="rating2">2</label>
+                    <input id="rating1" type="radio" ng-model="rating" value="1">
+                    <label for="rating1">1</label>
+                </span>
+      </form>
+
+      <form>
+            <span class="rating">Habitaciones
+                    <input id="rating6" type="radio" ng-model="rating1" value="5">
+                    <label for="rating6">5</label>
+                    <input id="rating7" type="radio" ng-model="rating1" value="4">
+                    <label for="rating7">4</label>
+                    <input id="rating8" type="radio" ng-model="rating1" value="3" checked>
+                    <label for="rating8">3</label>
+                    <input id="rating9" type="radio" ng-model="rating1" value="2">
+                    <label for="rating9">2</label>
+                    <input id="rating10" type="radio" ng-model="rating1" value="1">
+                    <label for="rating10">1</label>
+                </span>
+      </form>
+
+      <form>
+            <span class="rating">Infraestructura
+                    <input id="rating11" type="radio" ng-model="rating2" value="5">
+                    <label for="rating11">5</label>
+                    <input id="rating12" type="radio" ng-model="rating2" value="4">
+                    <label for="rating12">4</label>
+                    <input id="rating13" type="radio" ng-model="rating2" value="3" checked>
+                    <label for="rating13">3</label>
+                    <input id="rating14" type="radio" ng-model="rating2" value="2">
+                    <label for="rating14">2</label>
+                    <input id="rating15" type="radio" ng-model="rating2" value="1">
+                    <label for="rating15">1</label>
+                </span>
+      </form>
+      <form>
+            <span class="rating">Servicio al Cliente
+                    <input id="rating16" type="radio" ng-model="rating3" value="5">
+                    <label for="rating16">5</label>
+                    <input id="rating17" type="radio" ng-model="rating3" value="4">
+                    <label for="rating17">4</label>
+                    <input id="rating18" type="radio" ng-model="rating3" value="3" checked>
+                    <label for="rating18">3</label>
+                    <input id="rating19" type="radio" ng-model="rating3" value="2">
+                    <label for="rating19">2</label>
+                    <input id="rating20" type="radio" ng-model="rating3" value="1">
+                    <label for="rating20">1</label>
+          </span>
+          
+      </form>
+      <form>
+            <span class="rating">Limpieza
+                    <input id="rating25" type="radio" ng-model="rating4" value="5">
+                    <label for="rating25">5</label>
+                    <input id="rating24" type="radio" ng-model="rating4" value="4">
+                    <label for="rating24">4</label>
+                    <input id="rating23" type="radio" ng-model="rating4" value="3" checked>
+                    <label for="rating23">3</label>
+                    <input id="rating22" type="radio" ng-model="rating4" value="2">
+                    <label for="rating22">2</label>
+                    <input id="rating21" type="radio" ng-model="rating4" value="1">
+                    <label for="rating21">1</label>
+                </span>
+
+      </form>
+
+      
+
+      <div><strong>Comida:</strong> {{rating}}</div>
+      <div><strong>Habitaciones:</strong> {{rating1}}</div>
+      <div><strong>Infraestructura:</strong>{{rating2}}</div>
+      <div><strong>Habitaciones:</strong> {{rating3}}</div>
+      <div><strong>Limpieza:</strong> {{rating4}}</div>
+      <h1>Promedio</h1>
+      <div><strong>Total: {{ (rating -- rating1 -- rating2 -- rating3 --rating4)/5 }}</strong></div>
   </div>
 
-  <div class="wrapper">
-    <span class="rating">Limpieza
-        <input id="rating5" type="radio" name="rating" value="5">
-        <label for="rating5">5</label>
-        <input id="rating4" type="radio" name="rating" value="4">
-        <label for="rating4">4</label>
-        <input id="rating3" type="radio" name="rating" value="3" checked>
-        <label for="rating3">3</label>
-        <input id="rating2" type="radio" name="rating" value="2">
-        <label for="rating2">2</label>
-        <input id="rating1" type="radio" name="rating" value="1">
-        <label for="rating1">1</label>
-    </span>
-</div>
-  
 </body>
 
 

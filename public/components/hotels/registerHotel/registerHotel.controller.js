@@ -25,5 +25,8 @@
       $location.path('/dashboard');
 
     }
+
+
   }
+
 })();
