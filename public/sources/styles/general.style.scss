@@ -1,4 +1,4 @@
-@import "compass/css3";
+
 .login-block{
 
 background: rgb(16, 102, 33);  height: 100vh;/* fallback for old browsers */
@@ -61,6 +61,54 @@ padding : 50px 0;
     margin-top: 40px;
     margin-bottom: 40px;
   }
+
+  .wrapper {
+    padding: 10px;
+    margin: 100px auto;
+    width: 400px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,.1);
+    background-color: #fff;
+
+    .rating{
+      overflow: hidden;
+      vertical-align: bottom;
+      display: inline-block;
+      width: auto;
+      height: 30px;
+  }
+  .rating > input{
+      opacity: 0;
+      margin-right: -100%;
+  }
+  .rating > label{
+      position: relative;
+      display: block;
+      float: right;
+      background: url('../sources/images/star-off-big.png');
+      background-size: 30px 30px;
+  }
+  .rating > label:before{
+      display: block;
+      opacity: 0;
+      content: '';
+      width: 30px;
+      height: 30px;
+      background: url('../sources/images/star-on-big.png');
+      background-size: 30px 30px;
+      transition: opacity 0.2s linear;
+  }
+  .rating > label:hover:before,
+  .rating > label:hover ~ label:before,
+  .rating:not(:hover) > :checked ~ label:before{
+      opacity: 1;
+  }
+}
+
+
+  
+
+
 
 
 
