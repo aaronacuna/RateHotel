@@ -80,11 +80,6 @@
 
       
 
-      <div><strong>Comida:</strong> {{rating}}</div>
-      <div><strong>Habitaciones:</strong> {{rating1}}</div>
-      <div><strong>Infraestructura:</strong>{{rating2}}</div>
-      <div><strong>Habitaciones:</strong> {{rating3}}</div>
-      <div><strong>Limpieza:</strong> {{rating4}}</div>
       <h1>Promedio</h1>
       <div><strong>Total: {{ (rating -- rating1 -- rating2 -- rating3 --rating4)/5 }}</strong></div>
     <form ng-submit="vm.evaluar(vm.evaluacion)">

@@ -11,5 +11,19 @@
 
 
 
+    vm.evaluar = (pnuevoRating) => {
+
+      let objNuevoRating = Number(pnuevoRating);
+      console.log(objNuevoRating);
+
+      //let registro = hotelsService.addHotels(objNuevoHotel);
+
+      swal("Registro exitoso", "El Hotel ha sido registrado correctamente", "success", {
+        button: "Aceptar",
+      });
+
+      $location.path('/dashboard');
+
+    }
   }
 })();

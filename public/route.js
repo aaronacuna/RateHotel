@@ -198,7 +198,7 @@
         controllerAs: 'vm'
       })
 
-      .state('rating', {
+      .state('ratings', {
         url: '/rating',
         templateUrl: './components/ratings/ratings.view.html',
         data:{

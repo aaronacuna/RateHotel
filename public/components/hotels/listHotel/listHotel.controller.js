@@ -19,7 +19,7 @@
     };
 
     vm.evaluarHotel = (pHotel) =>{
-      $state.go('rating', {objHotelTemp : JSON.stringify(pHotel)});
+      $state.go('ratings', {objHotelTemp : JSON.stringify(pHotel)});
 
     };
 

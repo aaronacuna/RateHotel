@@ -37,6 +37,7 @@ class Hotel{
         this.correoSC = pCorreoSC;
         this.correoReservaciones = pcorreoReservaciones;
         this.estado = 'activo';
+        this.ratings = [];
 
     }
 
@@ -48,5 +49,7 @@ class Hotel{
     cambiarEstado(pEstado) {
         this.estado = pEstado;
     }
+
+    
 }
 
